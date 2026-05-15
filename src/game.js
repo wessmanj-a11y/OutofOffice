@@ -1,4 +1,4 @@
-import { positions, starterHand, drawCard } from './cards';
+import { positions, starterHand, drawCard } from './cards.js';
 
 export function createGame() {
   return {

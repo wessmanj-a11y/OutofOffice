@@ -11,22 +11,26 @@
     <section class="header">
       <div class="title">OUT OF OFFICE</div>
       <div class="tag">Climb. Burn Out. Escape.</div>
-      <div class="subtag">Single player vs. The Corporate Machine</div>
+      <div class="subtag">Persona dueling card battler vs. The Corporate Machine</div>
     </section>
 
     <section id="result"></section>
 
-    <section class="dashboard">
-      <div class="panel">Your Burnout<br><span id="burnout">0</span>/12</div>
-      <div class="panel">Your Sanity<br><span id="sanity">5</span>/20</div>
-      <div class="panel">Your Position<br><span id="position">Intern</span></div>
-      <div class="panel rivalPanel">Rival<br><span id="rivalPosition">Associate</span><br><small id="rivalStats"></small></div>
+    <section class="arena">
+      <section id="persona" class="persona"></section>
+      <section class="dashboard">
+        <div class="panel">Burnout<br><span id="burnout">0</span>/12</div>
+        <div class="panel">Sanity<br><span id="sanity">5</span>/20</div>
+        <div class="panel">Combo<br><span id="combo">None</span></div>
+        <div class="panel rivalPanel">Rival<br><span id="rivalPosition">Associate</span><br><small id="rivalStats"></small></div>
+      </section>
     </section>
 
     <section id="ladder" class="ladder"></section>
 
     <section class="controls">
       <button id="openPack">Open Booster Pack</button>
+      <button id="endTurn">End Turn</button>
       <button id="newGame">New Game</button>
     </section>
 

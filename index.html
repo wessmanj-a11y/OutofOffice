@@ -1,12 +1,39 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>OUT OF OFFICE</title>
-  </head>
-  <body>
-    <div id='root'></div>
-    <script type='module' src='./src/main.jsx'></script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OUT OF OFFICE</title>
+  <link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="header">
+      <div class="title">OUT OF OFFICE</div>
+      <div class="tag">Climb. Burn Out. Escape.</div>
+    </section>
+
+    <section id="result"></section>
+
+    <section class="dashboard">
+      <div class="panel">Burnout<br><span id="burnout">0</span>/12</div>
+      <div class="panel">Sanity<br><span id="sanity">5</span>/20</div>
+      <div class="panel">Position<br><span id="position">Intern</span></div>
+    </section>
+
+    <section id="ladder" class="ladder"></section>
+    <section id="hand" class="hand"></section>
+
+    <section class="controls">
+      <button id="newGame">New Game</button>
+    </section>
+
+    <section class="feed">
+      <h3>Corporate Feed</h3>
+      <div id="log"></div>
+    </section>
+  </main>
+
+  <script src="./src/app.js"></script>
+</body>
 </html>

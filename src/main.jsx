@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles.css';
-import { positions } from './cards';
-import { createGame, playTurn } from './game';
+import { positions } from './cards.js';
+import { createGame, playTurn } from './game.js';
 
 function cardClass(type){ return type === 'memo' ? 'memo' : type === 'pto' ? 'pto' : 'position'; }
 

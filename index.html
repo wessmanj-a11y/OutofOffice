@@ -7,43 +7,73 @@
   <link rel="stylesheet" href="./src/styles.css" />
 </head>
 <body>
-  <main class="app">
-    <section class="header">
-      <div class="title">OUT OF OFFICE</div>
-      <div class="tag">Climb. Burn Out. Escape.</div>
-      <div class="subtag">Persona dueling card battler vs. The Corporate Machine</div>
-    </section>
+  <main class="gameShell">
+    <header class="topBar">
+      <section class="brandBlock">
+        <div class="logoText"><span>OUT OF</span><strong>OFFICE</strong></div>
+        <p>Build your career. Break the system.<br>Escape the grind.</p>
+      </section>
+      <section class="quarterBanner">📎 QUARTER 3: BUDGET APOCALYPSE</section>
+      <section class="topStats">
+        <div>⚡ <b id="energy">3/5</b><small>ENERGY</small></div>
+        <div>🧠 <b id="sanityTop">42</b><small>SANITY</small></div>
+        <div>☕ <b id="coffee">7</b><small>COFFEE</small></div>
+      </section>
+      <nav class="topNav"><span>▱<small>DECK</small></span><span>▥<small>COLLECTION</small></span><span>⚙<small>OPTIONS</small></span></nav>
+    </header>
 
     <section id="result"></section>
 
-    <section class="arena">
-      <section id="persona" class="persona"></section>
-      <section class="dashboard">
-        <div class="panel">Burnout<br><span id="burnout">0</span>/12</div>
-        <div class="panel">Sanity<br><span id="sanity">5</span>/20</div>
-        <div class="panel">Combo<br><span id="combo">None</span></div>
-        <div class="panel rivalPanel">Rival<br><span id="rivalPosition">Associate</span><br><small id="rivalStats"></small></div>
+    <section class="mainGrid">
+      <aside class="leftCol">
+        <section id="persona" class="personaPanel"></section>
+        <section class="modifierPanel">
+          <h3>RUN MODIFIERS</h3>
+          <div class="mod"><b>☕ COFFEE ADDICTION</b><span>Start each turn with +1 Energy.</span></div>
+          <div class="mod"><b>📉 BUDGET FREEZE</b><span>Memo cards cost +1 Energy.</span></div>
+          <div class="mod"><b>📋 HR AUDIT</b><span>Boss enrages in 2 turns!</span></div>
+        </section>
+      </aside>
+
+      <section class="rightCol">
+        <section class="bossPanel">
+          <div class="bossLabel">☠ BOSS ENCOUNTER</div>
+          <div class="bossArt">
+            <div class="bossName" id="rivalPosition">HR GATEKEEPER</div>
+            <div class="bossFigure">👩‍💼</div>
+            <div class="speech">DID YOU FILL OUT YOUR SELF-REVIEW?</div>
+          </div>
+          <div class="bossInfo"><b>BOSS HP</b><div class="hpTrack"><span id="bossBar"></span></div><strong id="rivalStats">320 / 500</strong></div>
+          <div class="attackPattern"><b>ATTACK PATTERN</b><p>Passive-Aggressive Feedback<br>Applies <span>2 Burnout</span> per turn.</p></div>
+        </section>
+
+        <section class="comboPanel">
+          <h3>CURRENT COMBO</h3>
+          <div id="comboViz" class="comboViz"></div>
+          <div class="comboTip">Combo Tip<br><span>PTO + Perk cards amplify each other!</span></div>
+        </section>
       </section>
     </section>
 
-    <section id="ladder" class="ladder"></section>
+    <section id="hand" class="handRow"></section>
 
-    <section class="controls">
-      <button id="openPack">Open Booster Pack</button>
-      <button id="endTurn">End Turn</button>
-      <button id="newGame">New Game</button>
+    <section class="lowerGrid">
+      <section class="statsPanel">
+        <h3>YOUR STATS</h3>
+        <div>🔥 Burnout <meter id="burnoutMeter" min="0" max="12" value="0"></meter><span id="burnout">0</span>/12</div>
+        <div>🧠 Sanity <meter id="sanityMeter" min="0" max="28" value="5"></meter><span id="sanity">5</span>/28</div>
+        <div>📈 Productivity <meter min="0" max="10" value="8"></meter>8/10</div>
+        <div>👁 Visibility <meter min="0" max="10" value="5"></meter>5/10</div>
+        <div>⭐ Reputation <meter min="0" max="10" value="6"></meter>6/10</div>
+      </section>
+      <section class="pilePanel"><div class="pile">DRAW<br>PILE<br><b>18</b></div><div class="pile discard">DISCARD<br>PILE<br><b>5</b></div></section>
+      <section class="controls"><button id="endTurn">END TURN<br><small>refresh energy</small></button><button id="newGame">PLAY CARDS<br><small>new run</small></button></section>
+      <section class="packPanel"><div id="pack" class="pack"></div><button id="openPack">OPEN PACK 💎 1</button></section>
     </section>
 
-    <section id="pack" class="pack"></section>
-    <h2 class="sectionTitle">Your Hand</h2>
-    <section id="hand" class="hand"></section>
-
-    <section class="feed">
-      <h3>Corporate Feed</h3>
-      <div id="log"></div>
-    </section>
+    <section class="feed"><h3>CORPORATE FEED</h3><div id="log"></div></section>
+    <footer class="bottomNav"><span>🗺 RUN</span><span>👤 PERSONA</span><span>▰ DECK</span><span>▱ COLLECTION</span><span>🛒 STORE</span></footer>
   </main>
-
   <script src="./src/app.js"></script>
 </body>
 </html>
